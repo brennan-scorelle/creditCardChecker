@@ -22,7 +22,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
-
+// Validates individual credit card using the Luhn Algorithm
 const validateCred = (array) => {
     var sum = 0;
     for(i = array.length-1; i >= 1; i -= 2){
@@ -45,7 +45,7 @@ const validateCred = (array) => {
     }
 }
 
-
+//Finds invalid credit card numbers from a list of credit card numbers
 const findInvalidCards = (cards) => {
     var invalidCards = [];
     for (j = 0; j < cards.length; j++){
@@ -56,7 +56,7 @@ const findInvalidCards = (cards) => {
     return invalidCards;
 }
 
-
+//Identifies invalid credit card companies
 const idInvalidCardCompanies = (numbers) => {
     var invalidCardCompanies = [];
     for (x = 0; x < numbers.length; x++){
